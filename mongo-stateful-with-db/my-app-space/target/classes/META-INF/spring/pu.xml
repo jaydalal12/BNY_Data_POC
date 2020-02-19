@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:os-core="http://www.openspaces.org/schema/core"
+    xmlns:os-events="http://www.openspaces.org/schema/events"
+    xmlns:os-remoting="http://www.openspaces.org/schema/remoting"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.openspaces.org/schema/core http://www.openspaces.org/schema/15.0/core/openspaces-core.xsd
+        http://www.openspaces.org/schema/events http://www.openspaces.org/schema/15.0/events/openspaces-events.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.openspaces.org/schema/remoting http://www.openspaces.org/schema/15.0/remoting/openspaces-remoting.xsd">
+
+    <bean id="propertiesConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" />
+
+    <context:component-scan base-package="com.mycompany.app.model" />
+
+    <!-- Enables Spring Annotation configuration -->
+    <context:annotation-config />
+
+    <!-- Enables using @PreBackup, @PostBackup and other annotations -->
+    <os-core:annotation-support />
+
+    <os-core:giga-space-context />
+
+    <!-- Enables using @Polling and @Notify annotations -->
+    <os-events:annotation-support />
+
+    <!-- Enables using @RemotingService as well as @ExecutorProxy (and others)
+        annotations -->
+    <os-remoting:annotation-support />
+
+    <bean id="mongoClient" class="com.gigaspaces.persistency.MongoClientConnectorBeanFactory">
+        <property name="db" value="opsdb" />
+        <property name="config">
+            <bean class="com.mongodb.MongoClient">
+                <constructor-arg>
+                    <bean class="com.mongodb.MongoClientURI">
+                        <constructor-arg value="mongodb://mongodb:mongodb@localhost:27017/opsdb" type="java.lang.String"/>
+                    </bean>
+                </constructor-arg>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="spaceDataSource" class="com.gigaspaces.persistency.MongoSpaceDataSourceBeanFactory">
+        <property name="mongoClientConnector" ref="mongoClient" />
+    </bean>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/opsdb"/>
+        <property name="username" value="root"/>
+        <property name="password" value="mysql"/>
+    </bean>
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="packagesToScan" value="com.mycompany.app.model"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</prop>
+                <prop key="hibernate.cache.use_second_level_cache">false</prop>
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+                <prop key="hibernate.jdbc.use_scrollable_resultset">true</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="hibernateSpaceDataSource" class="org.openspaces.persistency.hibernate.DefaultHibernateSpaceDataSourceFactoryBean">
+        <property name="sessionFactory" ref="sessionFactory"/>
+        <property name="initialLoadChunkSize" value="2000"/>
+        <property name="limitResults" value="1000"/>
+    </bean>
+
+    <os-core:embedded-space id="space" space-name="mySpace" space-data-source="spaceDataSource" mirrored="true" schema="persistent">
+        <os-core:properties>
+            <props>
+                <!-- ALL IN CACHE -->
+                <prop key="space-config.engine.cache_policy">1</prop>
+                <!-- memory manager -->
+                <prop key="space-config.engine.memory_usage.high_watermark_percentage">97</prop>
+                <prop key="space-config.engine.memory_usage.write_only_block_percentage">96</prop>
+                <prop key="space-config.engine.memory_usage.write_only_check_percentage">95</prop>
+                <prop key="space-config.engine.memory_usage.low_watermark_percentage">94</prop>
+                <prop key="space-config.engine.memory_usage.gc-before-shortage">false</prop>
+                <!-- mongo -->
+                <prop key="cluster-config.cache-loader.central-data-source">true</prop>
+                <prop key="cluster-config.mirror-service.supports-partial-update">true</prop>
+            </props>
+        </os-core:properties>
+    </os-core:embedded-space>
+
+    <!-- Defines a local Jini transaction manager. -->
+    <os-core:distributed-tx-manager id="transactionManager" />
+
+    <os-core:giga-space id="gigaSpace" space="space" tx-manager="transactionManager" />
+
+</beans>

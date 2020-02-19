@@ -1,0 +1,5 @@
+com/mycompany/app/model/Person.class
+com/mycompany/app/model/StockEarningDate.class
+com/mycompany/app/model/StockInformation.class
+com/mycompany/app/model/Employee.class
+com/mycompany/app/model/StockPrice.class

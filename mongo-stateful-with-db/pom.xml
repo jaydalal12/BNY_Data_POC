@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.mycompany.app</groupId>
+    <artifactId>my-app</artifactId>
+    <version>0.1</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <gs.version>15.2.0-m10</gs.version>
+        <hibernate.version>5.2.18.Final</hibernate.version>
+        <db.driver.groupId>org.mongodb</db.driver.groupId>
+        <db.driver.artifactId>mongo-java-driver</db.driver.artifactId>
+        <db.driver.version>3.12.1</db.driver.version>
+
+        <db.driver.groupId1>mysql</db.driver.groupId1>
+        <db.driver.artifactId1>mysql-connector-java</db.driver.artifactId1>
+        <db.driver.version1> 8.0.18</db.driver.version1>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>org.openspaces</id>
+            <url>http://maven-repository.openspaces.org</url>
+        </repository>
+    </repositories>
+ 
+   <dependencies>
+        <!-- mongodb java driver -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+
+        <dependency> 
+            <groupId>org.antlr</groupId> 
+            <artifactId>antlr4-runtime</artifactId> 
+            <version>4.0</version>
+        </dependency> 
+
+        <dependency>
+            <groupId>org.gigaspaces</groupId>
+            <artifactId>xap-mongodb</artifactId>
+            <version>${gs.version}</version>
+        </dependency>
+    </dependencies>
+    
+    <modules>
+        <module>my-app-model</module>
+        <module>my-app-space</module>
+        <module>my-app-mirror</module>
+        <module>my-app-feeder</module>
+    </modules>
+
+</project>

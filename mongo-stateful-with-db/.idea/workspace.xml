@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="58069c26-d102-4a3e-9f32-e91121e84d5e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1XlzMBUKesc6E6TiMXRY9FTg8jd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/my-app-feeder/src/main/resources" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mycompany.app.model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/my-app-feeder/src/main/resources" />
+      <recent name="$PROJECT_DIR$/my-app-feeder/src/main/java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Program (1)">
+    <configuration name="Program (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Program" />
+      <module name="my-app-feeder" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.mycompany.app.Program" />
+      <module name="my-app-feeder" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mycompany.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Program (1)" />
+        <item itemvalue="Application.Program" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/Downloads/Gigaspaces/Crowley-master" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/Gigaspaces/play-samples-play-scala-starter-example" value="PREVIEW" />
+        <entry key="$USER_HOME$/Downloads/insightedge-geo-demo-old-master" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="58069c26-d102-4a3e-9f32-e91121e84d5e" name="Default Changelist" comment="" />
+      <created>1581635418305</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581635418305</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="515" y="83" width="374" height="626" key="#com.intellij.ide.util.MemberChooser" timestamp="1582063150434">
+      <screen x="49" y="27" width="1317" height="741" />
+    </state>
+    <state x="515" y="83" width="374" height="626" key="#com.intellij.ide.util.MemberChooser/49.27.1317.741@49.27.1317.741" timestamp="1582063150434" />
+    <state width="526" height="540" key="DebuggerActiveHint" timestamp="1582129059689">
+      <screen x="49" y="27" width="1317" height="741" />
+    </state>
+    <state width="526" height="540" key="DebuggerActiveHint/49.27.1317.741@49.27.1317.741" timestamp="1582129059689" />
+    <state x="490" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1581696454357">
+      <screen x="49" y="27" width="1317" height="741" />
+    </state>
+    <state x="490" y="154" width="424" height="484" key="FileChooserDialogImpl/49.27.1317.741@49.27.1317.741" timestamp="1581696454357" />
+    <state width="1271" height="175" key="GridCell.Tab.0.bottom" timestamp="1582140459091">
+      <screen x="49" y="27" width="1317" height="741" />
+    </state>
+    <state width="1271" height="175" key="GridCell.Tab.0.bottom/49.27.1317.741@49.27.1317.741" timestamp="1582140459090" />
+    <state width="1271" height="175" key="GridCell.Tab.0.center" timestamp="1582140459089">
+      <screen x="49" y="27" width="1317" height="741" />
+    </state>
+    <state width="1271" height="175" key="GridCell.Tab.0.center/49.27.1317.741@49.27.1317.741" timestamp="1582140459089" />
+    <state width="1271" height="175" key="GridCell.Tab.0.left" timestamp="1582140459088">
+      <screen x="49" y="27" width="1317" height="741" />
+    </state>
+    <state width="1271" height="175" key="GridCell.Tab.0.left/49.27.1317.741@49.27.1317.741" timestamp="1582140459088" />
+    <state width="1271" height="175" key="GridCell.Tab.0.right" timestamp="1582140459089">
+      <screen x="49" y="27" width="1317" height="741" />
+    </state>
+    <state width="1271" height="175" key="GridCell.Tab.0.right/49.27.1317.741@49.27.1317.741" timestamp="1582140459089" />
+    <state width="1271" height="219" key="GridCell.Tab.1.bottom" timestamp="1582129149707">
+      <screen x="49" y="27" width="1317" height="741" />
+    </state>
+    <state width="1271" height="219" key="GridCell.Tab.1.bottom/49.27.1317.741@49.27.1317.741" timestamp="1582129149707" />
+    <state width="1271" height="219" key="GridCell.Tab.1.center" timestamp="1582129149706">
+      <screen x="49" y="27" width="1317" height="741" />
+    </state>
+    <state width="1271" height="219" key="GridCell.Tab.1.center/49.27.1317.741@49.27.1317.741" timestamp="1582129149706" />
+    <state width="1271" height="219" key="GridCell.Tab.1.left" timestamp="1582129149705">
+      <screen x="49" y="27" width="1317" height="741" />
+    </state>
+    <state width="1271" height="219" key="GridCell.Tab.1.left/49.27.1317.741@49.27.1317.741" timestamp="1582129149705" />
+    <state width="1271" height="219" key="GridCell.Tab.1.right" timestamp="1582129149706">
+      <screen x="49" y="27" width="1317" height="741" />
+    </state>
+    <state width="1271" height="219" key="GridCell.Tab.1.right/49.27.1317.741@49.27.1317.741" timestamp="1582129149706" />
+    <state x="352" y="108" width="869" height="642" key="find.popup" timestamp="1582144379263">
+      <screen x="49" y="27" width="1317" height="741" />
+    </state>
+    <state x="352" y="108" width="869" height="642" key="find.popup/49.27.1317.741@49.27.1317.741" timestamp="1582144379263" />
+    <state x="49" y="42" width="1307" height="708" key="new project wizard" timestamp="1582072488108">
+      <screen x="49" y="27" width="1317" height="741" />
+    </state>
+    <state x="49" y="42" width="1307" height="708" key="new project wizard/49.27.1317.741@49.27.1317.741" timestamp="1582072488108" />
+    <state x="370" y="89" key="search.everywhere.popup" timestamp="1581704821312">
+      <screen x="49" y="27" width="1317" height="741" />
+    </state>
+    <state x="370" y="89" key="search.everywhere.popup/49.27.1317.741@49.27.1317.741" timestamp="1581704821312" />
+  </component>
+</project>

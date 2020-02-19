@@ -1,0 +1,26 @@
+<assembly>
+    <id>package-dependencies-in-lib</id>
+    <baseDirectory>lib</baseDirectory>
+    <formats>
+        <format>dir</format>
+    </formats>
+    <dependencySets>
+        <!-- non-transitive dependencies -->
+        <dependencySet>
+            <useTransitiveDependencies>false</useTransitiveDependencies>
+            <includes>
+                <include>com.mycompany.app:my-app-model</include>
+            </includes>
+        </dependencySet>
+        <!-- transitive dependencies -->
+        <dependencySet>
+            <useTransitiveDependencies>true</useTransitiveDependencies>
+            <useTransitiveFiltering>true</useTransitiveFiltering>
+            <includes>
+                <include>org.hibernate:hibernate-core</include>
+                <include>${db.driver.groupId}:${db.driver.artifactId}</include>
+                <include>${db.driver.groupId1}:${db.driver.artifactId1}</include>
+            </includes>
+        </dependencySet>
+    </dependencySets>
+</assembly>

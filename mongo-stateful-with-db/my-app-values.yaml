@@ -1,0 +1,7 @@
+space:
+  name: mySpace
+db:
+  driver: mongodb.jdbc.MongoDriver
+  url: jdbc:mongo://localhost:27017/opsdb
+  user: mongodb
+  password: mongodb
